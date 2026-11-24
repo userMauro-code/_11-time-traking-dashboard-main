@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-card-user:hsl(246, 80%, 60%);
+    --bg-card-work: hsl(15, 100%, 70%);
+    --bg-card-play: hsl(195, 74%, 62%);
+    --bg-card-study: hsl(348, 100%, 68%);
+    --bg-card-exercise: hsl(145, 58%, 55%);
+    --bg-card-social: hsl(264, 64%, 52%);
+    --bg-card-self-care: hsl(43, 84%, 65%);
+
+    --bg-body: hsl(226, 43%, 10%);
+    --bg: hsl(235, 46%, 20%);
+    --bg-card-active: hsl(235, 45%, 61%);
+    --color-text:hsl(236, 100%, 87%);
+
+    --font-size: clamp(18px, 4vw, 18px);
+    --font-family: 'Rubik';
+    --font-bold: 500;
+    --font-regular: 400;
+    --font-light:300;
+
+    --card-radius: 1rem;
+}
+
+html,
+body {
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-light);
+    min-height: 100vh;
+    background-color: var(--bg-body);
+    
+
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.section > .card__header > .card__header--user {
+    background-color: var(--bg-card-user);
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--card-radius);
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.section > .card__header > .card__header--user > img {
+    height: 80px;
+    width: 80px;
+    border: 3px solid var(--color-text);
+    border-radius: 100%;
+}
+
+.section > .card__header > .card__header--user > .name__user > h2 {
+    font-weight: var(--font-light);
+}
+
+.section > .card {
+    background-color: var(--bg);
+    border-radius: var(--card-radius);
+}
+
+.section > .card__header > .card__header--buttons {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section > .card__header > .card__header--buttons > button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+    font-weight: var(--font-regular);
+    font-size: .8rem;
+}

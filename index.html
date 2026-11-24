@@ -5,29 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <script src="./js/app.js" defer></script>
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
+  <section class="section">
+    <article class="card card__header">
+      <div class="card__header--user">
+        <img src="./images/image-jeremy.png" alt="">
+        <div class="name__user">
+          <p>Report for</p>
+          <h2>Jeremy Robson</h2>
+        </div>
+      </div>
+      <div class="card__header--buttons">
+        <button>Daily</button>
+        <button>Weekly</button>
+        <button>Monthly</button>
+      </div>
+    </article>
 
-  Report for
-  Jeremy Robson
+    <article class="card card__works">
+      <img src="./images/icon-work.svg" alt="">
+      <div class="card__content">
+        <div class="card__content--category">
+          <h3>Work</h3>
+          <button><img src="./images/icon-ellipsis.svg" alt="button__opcion"></button>
+        </div>
+        <div class="card__content--data">
+          <p class="actual">32hrs</p><!-- weekly -->   
+          <p class="previous">Previous - 36hrs</p><!-- weekly -->
+        </div>
+      </div>
+    </article>
+  </section>
 
-  Daily
-  Weekly
-  Monthly
-
-  Work
+  
   5hrs <!-- daily -->
   Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
+
   103hrs <!-- monthly -->
   Previous - 128hrs <!-- monthly -->
 
@@ -71,10 +95,5 @@
   7hrs <!-- monthly -->
   Previous - 11hrs <!-- monthly -->
 
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
 </body>
 </html>
