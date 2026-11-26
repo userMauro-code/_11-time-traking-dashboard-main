@@ -24,7 +24,7 @@
     --font-regular: 400;
     --font-light:300;
 
-    --card-radius: 1rem;
+    --card-radius: .5rem;
 }
 
 html,
@@ -68,7 +68,7 @@ body {
     font-weight: var(--font-light);
 }
 
-.section > .card {
+.section > .card__header {
     background-color: var(--bg);
     border-radius: var(--card-radius);
     width: 100%;
@@ -78,6 +78,11 @@ body {
     background-color: var(--bg);
     border-radius: var(--card-radius);
     padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
 }
 
 .section > .card__header > .card__header--buttons {
@@ -95,18 +100,64 @@ body {
     font-size: .8rem;
 }
 
-.section > .card__works {
-    background-color:  var(--bg-card-work);
+
+.section > .card {
     position: relative;
     padding-top: 2rem;
-    z-index: 30;
+    z-index: 0;
+    width: 100%;
+    border-radius: var(--card-radius);
 }
 
-.section > .card__works > img {
+.section > .card__works {
+    background-color:  var(--bg-card-work);
+}
+
+.section > .card__play {
+    background-color: var(--bg-card-play);    
+}
+
+.section > .card__study {
+    background-color: var(--bg-card-study);
+}
+
+.section > .card__exercise {
+    background-color: var(--bg-card-exercise);
+}
+
+.section > .card__social {
+    background-color: var(--bg-card-social);
+}
+
+.section > .card__selfCare {
+    background-color: var(--bg-card-self-care);
+}
+
+
+
+.card__content > .card__content--category > button {
+    background-color: transparent;
+    border: none;
+}
+
+.card__content > .card__content--category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__content > .card__content--data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section > .card > img {
     height: 52px;
     width: 52px;
     position: absolute;
     right: .8rem;
     top: 0;
-    z-index: 0;
+    
 }
